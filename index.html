@@ -3,8 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        .btn {
+            border: none; /* Remove borders */
+            color: white; /* Add a text color */
+            padding: 14px 28px; /* Add some padding */
+            cursor: pointer; /* Add a pointer cursor on mouse-over */
+        }
+
+        .Hi {background-color: purple;} /* Green */
+        .Hi:hover {background-color: yellow;}
+
+        .success {background-color: #04AA6D;} /* Green */
+        .success:hover {background-color: #46a049;}
+
+        .info {background-color: #2196F3;} /* Blue */
+        .info:hover {background: #0b7dda;}
+
+        .warning {background-color: #ff9800;} /* Orange */
+        .warning:hover {background: #e68a00;}
+
+        .danger {background-color: #f44336;} /* Red */
+        .danger:hover {background: #da190b;}
+
+        .default {background-color: #e7e7e7; color: black;} /* Gray */
+        .default:hover {background: #ddd;}
+
+        #more {display:none;}
+    </style>
 </head>
 <body>
+<button class="btn Hi">Hi</button>
+<button class="btn success">Success</button>
+<button class="btn info">Info</button>
+<button class="btn warning">Warning</button>
+<button class="btn danger">Danger</button>
+<button class="btn default">Default</button>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet,
+    nulla et dictum interdum, nisi lorem egestas vitae scel
+    <span id="dots">...</span>
+    <span id="more">erisque enim ligula venenatis dolor.Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+
+<button id="myBtn">Read more</button>
+
+<script>
+    function myFunction() {
+        let dots = document.getElementById("dots");
+        let moreText = document.getElementById("more");
+        let btnText = document.getElementById("myBtn");
+
+
+        if (dots.style.display === "none") {
+            dots.style.display = "inline";
+            btnText.innerHTML = "Read more";
+            moreText.style.display = "none";
+        } else {
+            dots.style.display = "none";
+            btnText.innerHTML = "Read less";
+            moreText.style.display = "inline";
+        }
+    }
+    document.getElementById("myBtn").addEventListener("click", myFunction);
+
+</script>
+
+
+
 
 </body>
 </html>
+
